@@ -79,4 +79,8 @@ func main(){
 
 	fmt.Println(canIDrink(17))
 	fmt.Println(canIDrinkSwitch(17))
+
+	a:=2
+	b:=&a
+	fmt.Println(*b,b)
 } 

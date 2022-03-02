@@ -3,13 +3,15 @@ package main
 import (
 	"fmt"
 
-	"github.com/plusbeauxjours/learnGo/accounts"
+	"github.com/plusbeauxjours/learnGo/mydict"
 )
 
-
 func main() {
-	account := accounts.NewAccount("mj")
-	fmt.Println(account)
-	account.Deposit(100)
-	fmt.Println(account)
+	dictionary := mydict.Dictionary{"first": "First word"}
+	definition, err := dictionary.Search("first")
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(definition)
+	}
 }
